@@ -1,0 +1,64 @@
+<div>
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" [(ngModel)]="userId" />
+  
+    <label for="token">Token:</label>
+    <input type="text" id="token" [(ngModel)]="token" />
+  
+    <button (click)="getWishlist()">Get Wishlist</button>
+  </div>
+  
+ <!--<div *ngIf="wishlist">
+    <h2>Wishlist</h2>
+    <ul>
+      <li *ngFor="let item of wishlist">
+        {{ item.symbol }} - {{ item.name }} - {{ item.currency }}
+        <button (click)="deleteFromWishlist(item.id)">Delete</button>
+        <button (click)="updateWishlist(item.id, updatedItem)">Update</button>
+      </li>
+    </ul>
+  </div>
+
+  
+  <div>
+    <label for="newItem">New Item:</label>
+    <input type="text" id="newItem" [(ngModel)]="newItem" />
+    <button (click)="addToWishlist( item)">Add to Wishlist</button>
+  </div>
+-->
+  
+  <div>
+    <button (click)="getAllItems()">Get All Items</button>
+  </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Currency</th>
+              <th>Exchange</th>
+              <th>MIC Code</th>
+              <th>Country</th>
+              <th>Type</th>
+              <th>Extra Field</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of wishlist">
+              <td>{{ data.symbol }}</td>
+              <td>{{ data.name }}</td>
+              <td>{{ data.currency }}</td>
+              <td>{{ data.exchange }}</td>
+              <td>{{ data.mic_code }}</td>
+              <td>{{ data.country }}</td>
+              <td>{{ data.type }}</td>
+              <td>{{ data.extraField }}</td>
+              <td><button class="btn btn-danger" (click)="onButtonClick(data)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      
+      
+    

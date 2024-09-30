@@ -1,0 +1,105 @@
+<div class="page-holder">
+  <div class="card">
+    <div class="card-header text-center">
+      <h1 class="card-heading display-4">Sign Up</h1>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="userForm" (ngSubmit)="signUp()">
+        <!-- First Name -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">First Name</label>
+            <input formControlName="firstName" class="form-control form-control-sm" type="text" required>
+            <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('firstName')?.hasError('required')">First Name is required.</div>
+            </div>
+          </div>
+          <!-- Last Name -->
+          <div class="col-md-6 mb-3">
+            <label for="lastname">Last Name</label>
+            <input formControlName="lastName" class="form-control form-control-sm" type="text" required>
+            <div *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('lastName')?.hasError('required')">Last Name is required.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="email">Email</label>
+            <input formControlName="email" class="form-control form-control-sm" type="email" required>
+            <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('email')?.hasError('required')">Email is required.</div>
+              <div *ngIf="userForm.get('email')?.hasError('email')">Invalid email format.</div>
+            </div>
+          </div>
+          <!-- Username -->
+          <div class="col-md-6 mb-3">
+            <label for="username">Username</label>
+            <input formControlName="username" class="form-control form-control-sm" type="text" required>
+            <div *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('username')?.hasError('required')">Username is required.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Phone Number and Date of Birth -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="number">Phone Number</label>
+            <input formControlName="number" class="form-control form-control-sm" type="tel" required>
+            <div *ngIf="userForm.get('number')?.invalid && userForm.get('number')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('number')?.hasError('required')">Phone Number is required.</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input formControlName="dateOfBirth" class="form-control form-control-sm" type="date" required>
+            <div *ngIf="userForm.get('dateOfBirth')?.invalid && userForm.get('dateOfBirth')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('dateOfBirth')?.hasError('required')">Date of Birth is required.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Password -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="password">Password</label>
+            <input formControlName="password" class="form-control form-control-sm" type="password" required>
+            <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('password')?.hasError('required')">Password is required.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Security Question and Answer -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="securityQuestion">Security Question</label>
+            <select formControlName="securityQuestion" class="form-control form-control-sm" required>
+              <option value="">Select a Security Question</option>
+              <option value="q1">Question 1</option>
+              <option value="q2">Question 2</option>
+            </select>
+            <div *ngIf="userForm.get('securityQuestion')?.invalid && userForm.get('securityQuestion')?.touched"
+              class="text-danger">
+              <div *ngIf="userForm.get('securityQuestion')?.hasError('required')">Security Question is required.</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="securityAnswer">Security Answer</label>
+            <input formControlName="securityAnswer" class="form-control form-control-sm" type="text" required>
+            <div *ngIf="userForm.get('securityAnswer')?.invalid && userForm.get('securityAnswer')?.touched"
+              class="text-danger">
+              <div *ngIf="userForm.get('securityAnswer')?.hasError('required')">Security Answer is required.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button class="btn btn-primary" id="submit" type="submit" name="registerSubmit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-center">
+      <div class="text-sm text-muted">Already have an account? <a href="/login">Login</a>.</div>
+    </div>
+  </div>
+</div>

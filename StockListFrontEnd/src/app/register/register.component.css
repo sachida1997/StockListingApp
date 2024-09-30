@@ -1,0 +1,89 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/earth-blue-wave-background_1017-36678.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702944000&semt=ais");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* or 'contain' depending on your preference */
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+ 
+.page-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-bottom: 0;
+}
+ 
+.card {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+}
+ 
+.card-header {
+    height: 100px;
+    position: relative;
+    padding: 2rem 2rem;
+    border-bottom: none;
+    background-color: #007bff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    color: #fff;
+}
+ 
+.card-body {
+    padding: 2rem;
+    border-color: black;
+    color: black;
+ 
+}
+ 
+.form-group {
+    margin-bottom: 1.5rem;
+}
+ 
+.form-control.form-control-sm {
+    border-width: 2px;
+    border-radius: 2%;
+    border-color: rgba(0, 0, 0, 0.495);
+}
+ 
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    transform: translateY(-50%);
+}
+ 
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+ 
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+ 
+.text-muted {
+    color: #6c757d;
+}
+ 
+.text-sm {
+    font-size: 0.7875rem;
+}
+ 
+ 
+.card-footer {
+    margin-top: -1.5rem;
+}
